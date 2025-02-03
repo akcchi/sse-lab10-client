@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet"  href= "{{ url_for('static',filename='styles/style.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book Search | 70085 Lab 10</title>
+
+    </head>
+    <body>
+        <header>
+            <h1 id="title">Lab 10 Client Service</h1>
+        </header>
+        <main>
+            <p>Filter through books stored in the books API here.</p>
+            <p>Please input your search criteria next to the relevant fields, or leave it blank.</p>
+            <p>Leave everything blank to view all books.</p>
+        <form action="/search_results" method="post">
+            <table>
+                <tr>
+                    <td align="right">ID:</td>
+                    <td align="left"><input type="text" name="id"></td>
+                </tr>
+                <tr>
+                    <td align="right">Title:</td>
+                    <td align="left"><input type="text" name="title"></td>
+                </tr>
+                <tr>
+                    <td align="right">Author:</td>
+                    <td align="left"><input type="text" name="author"></td>
+                </tr>
+                <tr>
+                    <td align="right">Publication year:</td>
+                    <td align="left"><input type="text" name="publication_year"></td>
+                </tr>
+                <tr>
+                    <td align="right">Genre:</td>
+                    <td align="left"><input type="text" name="genre"></td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <input type="submit" value="SEARCH!">
+        </form>
+
+        </main>
+     </body>
+</html>
